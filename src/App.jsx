@@ -2,12 +2,16 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import Planner from './views/Planner';
 import Header from './components/Header/Header';
 import Entry from './views/Entry';
+import { PlannerProvider } from './context/PlannerContext';
+
 
 import './App.css';
 
 export default function App() {
   return (
     <> {/* TODO: Add PlannerProvider */}
+    <PlannerProvider>
+
       <Header />
       <BrowserRouter>
         <Switch>
@@ -22,6 +26,7 @@ export default function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+    </PlannerProvider>
     </>
   );
 }
