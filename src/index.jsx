@@ -5,10 +5,8 @@ import { PlannerProvider } from './context/PlannerContext';
 
 render(
   <React.StrictMode>
-    <PlannerProvider>
 
     <App />
-    </PlannerProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
